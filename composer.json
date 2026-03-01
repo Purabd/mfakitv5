@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "jeffersongoncalves/mfakitv4",
+    "name": "jeffersongoncalves/mfakitv5",
     "type": "project",
     "description": "Starter kit for Laravel 12 and Filament 4 with multi-panel structure, built-in Multi-Factor Authentication (MFA), WhatsApp connector, and profile management.",
     "keywords": [

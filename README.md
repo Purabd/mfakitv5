@@ -1,6 +1,6 @@
 <div class="filament-hidden">
 
-![MFAKit](https://raw.githubusercontent.com/jeffersongoncalves/mfakitv4/main/art/jeffersongoncalves-mfakitv4.png)
+![MFAKit](https://raw.githubusercontent.com/jeffersongoncalves/mfakitv5/main/art/jeffersongoncalves-mfakitv5.png)
 
 </div>
 
@@ -31,7 +31,7 @@ web applications with a ready-to-use multi-panel structure.
 
 Clone the repository
 ``` bash
-laravel new my-app --using=jeffersongoncalves/mfakitv4 --database=mysql
+laravel new my-app --using=jeffersongoncalves/mfakitv5 --database=mysql
 ```
 
 ### Using FilaKit CLI
@@ -39,7 +39,7 @@ laravel new my-app --using=jeffersongoncalves/mfakitv4 --database=mysql
 Or use [FilaKit CLI](https://github.com/jeffersongoncalves/filakit-cli) for a simplified setup:
 
 ```bash
-filakit new my-app --kit=jeffersongoncalves/mfakitv4
+filakit new my-app --kit=jeffersongoncalves/mfakitv5
 ```
 
 > Install FilaKit CLI: `composer global require jeffersongoncalves/filakit-cli`
@@ -93,7 +93,7 @@ php artisan serve
 
 Clone the repository
 ```bash
-laravel new my-app --using=jeffersongoncalves/mfakitv4 --database=mysql
+laravel new my-app --using=jeffersongoncalves/mfakitv5 --database=mysql
 ```
 
 Move into the project directory
