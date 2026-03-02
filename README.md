@@ -4,17 +4,17 @@
 
 </div>
 
-# MFAKit Start Kit Filament 4.x and Laravel 12.x
+# MFAKit Start Kit Filament 5.x and Laravel 12.x
 
 ## About MFAKit
 
-MFAKit is a robust starter kit built on Laravel 12.x and Filament 4.x, designed to accelerate the development of modern
+MFAKit is a robust starter kit built on Laravel 12.x and Filament 5.x, designed to accelerate the development of modern
 web applications with a ready-to-use multi-panel structure.
 
 ## Features
 
 - **Laravel 12.x** - The latest version of the most elegant PHP framework
-- **Filament 4.x** - Powerful and flexible admin framework
+- **Filament 5.x** - Powerful and flexible admin framework with Livewire 4 support
 - **Multi-Panel Structure** - Includes three pre-configured panels:
     - Admin Panel (`/admin`) - For system administrators
     - App Panel (`/app`) - For authenticated application users
